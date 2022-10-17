@@ -33,8 +33,10 @@ function Weather() {
       bgHome.style.backgroundImage = `url(${overcast})`;
     } else if(code > 50 && code < 70) {
       bgHome.style.backgroundImage = `url(${rainy})`;
-    } else {
+    } else if(code > 70 && code < 80) {
       bgHome.style.backgroundImage = `url(${snowy})`;
+    } else {
+      bgHome.style.backgroundImage = `url(${rainy})`;
     }
   }, [weather.current_weather]);
 
