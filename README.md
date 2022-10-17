@@ -1,1 +1,1 @@
-Thunder - The Weather App
+# Thunder - The Weather App
