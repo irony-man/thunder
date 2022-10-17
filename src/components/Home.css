@@ -20,9 +20,11 @@
     gap: 30px;
     justify-content: center;
 }
+
 footer {
     position: absolute;
     width: 100%;
     text-align: center;
     bottom: 10px;
+    position: fixed;
 }

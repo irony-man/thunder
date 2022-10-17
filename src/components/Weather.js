@@ -6,13 +6,16 @@ import rainy from "../images/rainy.jpg";
 import snowy from "../images/snowy.jpg";
 import overcast from "../images/overcast.jpg";
 import './Weather.css';
+import WeatherChart from "./WeatherChart";
 
 function Weather() {
   const [search, setSearch] = useState([]);
   const [input, setInput] = useState("");
   const [focus, setFocus] = useState(false);
   const [city, setCity] = useState([]);
-  const [weather, setWeather] = useState({current_weather:{}, daily:{}});
+  const [weather, setWeather] = useState({current_weather:{}, daily:{}, hourly:{
+    time:[], temperature_2m: [], rain: [], snowfall: []
+  }});
   useEffect(() => {
     const queryParams = new URLSearchParams(window.location.search);
     const long = queryParams.get('long');
@@ -20,7 +23,6 @@ function Weather() {
     if(lat && long){
       selectCity(0, {lat, long});
     }
-    else alert("Something went wrong!!");
   }, []);
   useEffect(() => {
     const bgHome = document.getElementById('weather-page');
@@ -90,8 +92,8 @@ function Weather() {
                   </h1>
                   <p className="weather-degree">o</p>
                 </div>
-                <div className="weather-type">
-                  <i className={weather.current_weather.weathercode !== undefined?codes[weather.current_weather.weathercode].icon:"fas fa-cloud fa-4x"}></i>
+                <div className="weather-type hide-mb">
+                  <i className={weather.current_weather.weathercode !== undefined?codes[weather.current_weather.weathercode].icon:"fas fa-cloud"}></i>
                   <p className="mt-2">{weather.current_weather.weathercode !== undefined?codes[weather.current_weather.weathercode].type:"N/A"}</p>
                 </div>
               </div>
@@ -127,7 +129,7 @@ function Weather() {
                     ))}
                   </div>:<></>}
                 </div>
-                <button className="city-submit" type="submit">
+                <button className="city-submit btn btn-light" type="submit">
                   <i className="fas fa-search fa-lg"></i>
                 </button>
               </form>
@@ -139,8 +141,25 @@ function Weather() {
                   <p>Country: <span>{city.country || "N/A"}</span></p>
                   <p>Longitude: <span>{city.longitude || "N/A"}</span></p>
                   <p>Latitude: <span>{city.latitude || "N/A"}</span></p>
+                  <p>Elevation: <span>{city.elevation || "N/A"}</span></p>
+                  <p>Population: <span>{city.population || "N/A"}</span></p>
+                  <p>Timezone: <span>{city.timezone || "N/A"}</span></p>
                 </div>
               </div>
+              <button type="button" className="btn btn-outline-light weather-det-button hide-mb hover-text" data-toggle="modal" data-target="#exampleModalCenter">
+                Detailed Weather!! <span className="tooltip-text mt-3">Shows data only on large screens!!</span>
+              </button>
+            </div>
+            <p className="mt-5 text-center">Developed by Shivam Rai</p>
+          </div>
+        </div>
+        <div className="modal fade" id="exampleModalCenter" tabIndex="-1" role="dialog">
+          <div className="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div className="modal-content">
+              <div className="modal-body">
+                <WeatherChart value={weather} city={city.name} />
+              </div>
+              <button type="button" className="btn btn-danger" data-dismiss="modal">Close</button>
             </div>
           </div>
         </div>

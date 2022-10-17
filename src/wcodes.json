@@ -1,0 +1,58 @@
+{
+    "0": {
+        "type": "Clear sky",
+        "icon": "fas fa-sun fa-4x"
+    },
+    "1": {
+        "type": "Mainly clear",
+        "icon": "fas fa-cloud-sun fa-4x"
+    },
+    "2": {
+        "type": "Partly cloudy",
+        "icon": "fas fa-cloud-sun fa-4x"
+    },
+    "3": {
+        "type": "Overcast",
+        "icon": "fas fa-cloud fa-4x"
+    },
+    "45": {
+        "type": "Fog",
+        "icon": "far fa-smog fa-4x"
+    },
+    "51": {
+        "type": "Drizzle: Light",
+        "icon": "fas fa-cloud-sun-rain fa-4x"
+    },
+    "53": {
+        "type": "Drizzle: Moderate",
+        "icon": "fas fa-cloud-showers-heavy fa-4x"
+    },
+    "55": {
+        "type": "Drizzle: Dense intensity",
+        "icon": "fas fa-cloud-showers-water fa-4x"
+    },
+    "61": {
+        "type": "Rain: Slight",
+        "icon": "fas fa-cloud-sun-rain fa-4x"
+    },
+    "63": {
+        "type": "Rain: Moderate",
+        "icon": "fas fa-cloud-showers-heavy fa-4x"
+    },
+    "65": {
+        "type": "Rain: Heavy intensity",
+        "icon": "fas fa-cloud-showers-water fa-4x"
+    },
+    "71": {
+        "type": "Snow Fall: Slight",
+        "icon": "fas fa-ice-cream fa-4x"
+    },
+    "73": {
+        "type": "Snow Fall: Moderate",
+        "icon": "fas fa-snowman fa-4x"
+    },
+    "75": {
+        "type": "Snow Fall: Heavy intensity",
+        "icon": "fas fa-snowflake fa-4x"
+    }
+}

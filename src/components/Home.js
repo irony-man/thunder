@@ -5,11 +5,18 @@ import "./Home.css";
 const Home = () => {
     const navigate = useNavigate();
     const getLocation = () => {
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition((position)=> {
-                const p = position.coords;
-                navigate(`/weather?lat=${p.latitude}&long=${p.longitude}`);
-            })
+        if (navigator.geolocation) {navigator.permissions
+            .query({ name: "geolocation" })
+            .then(function (result) {
+                if (result.state === "granted") {
+                    navigator.geolocation.getCurrentPosition((position)=> {
+                        const p = position.coords;
+                        navigate(`/weather?lat=${p.latitude}&long=${p.longitude}`);
+                    })
+                } else if (result.state === "denied") {
+                    alert("Location access denied!!");
+                }
+            });
         } else {
             alert("Geolocation is not supported by this browser.");
         }
