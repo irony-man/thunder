@@ -1,5 +1,6 @@
 #weather-page {
 	background-image: url("../images/snowy.jpg");
+    background: linear-gradient(rgba(0, 67, 106, 1) 0%, rgba(2, 21, 32, 1) 100%);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center top;
