@@ -1,5 +1,6 @@
 #home-page {
     height: 100vh;
+    min-height: 500px;
     background: linear-gradient(rgba(0, 67, 106, 1) 0%, rgba(2, 21, 32, 1) 100%);
     color: white;
     margin: 0 auto;
