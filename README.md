@@ -1,4 +1,4 @@
-# [Thunder - The Weather Appp](https://thunder-by-shivam.netlify.app/)
+# [Thunder - The Weather Appp](https://thunder-khaki.vercel.app/)
 
 A website developed by `Shivam Rai` that uses `Open-Meteo API` to fetch weather details of a city.
 ### Implementation & Features
