@@ -54,5 +54,17 @@
     "75": {
         "type": "Snow Fall: Heavy intensity",
         "icon": "fas fa-snowflake fa-4x"
+    },
+    "80": {
+        "type": "Rain: Slight",
+        "icon": "fas fa-cloud-sun-rain fa-4x"
+    },
+    "81": {
+        "type": "Rain: Moderate",
+        "icon": "fas fa-cloud-showers-heavy fa-4x"
+    },
+    "82": {
+        "type": "Rain: Heavy intensity",
+        "icon": "fas fa-cloud-showers-water fa-4x"
     }
 }
