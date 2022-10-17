@@ -8,3 +8,4 @@ A website developed by `Shivam Rai` that uses `Open-Meteo API` to fetch weather 
 - Used `Bootstrap` for easy styling.
 - It `detects the location` of user to show fast weather report.
 - General `city details` like Population, Elevation etc.
+- Deployed on `Vercel`.
